@@ -9,6 +9,7 @@ Start your Rabbit server before running the code samples here
 Rabbit admin console: http://localhost:15672/
 Login with guest, guest credentials
 
+
 # How to execute the examples
 
 ## Hello
