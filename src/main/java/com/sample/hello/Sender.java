@@ -18,6 +18,8 @@ public class Sender{
         try(Connection connection = factory.newConnection()){
             Channel channel = connection.createChannel();
             channel.queueDeclare(QUEUE_NAME, false, false, false, null);
+
+            //default exchange type (1st parameter) is used to send messages to named queue
             channel.basicPublish("", QUEUE_NAME, null, MESSAGE.getBytes("UTF-8"));
             System.out.println("Sent message " + MESSAGE);
         }

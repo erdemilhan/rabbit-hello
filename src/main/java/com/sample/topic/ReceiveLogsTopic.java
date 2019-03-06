@@ -18,6 +18,8 @@ public class ReceiveLogsTopic {
     Channel channel = connection.createChannel();
 
     channel.exchangeDeclare(EXCHANGE_NAME, "topic");
+
+    // a non-durable, exclusive, autodelete queue 
     String queueName = channel.queueDeclare().getQueue();
 
     if (argv.length < 1) {

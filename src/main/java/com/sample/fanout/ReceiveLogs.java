@@ -17,7 +17,8 @@ public class ReceiveLogs {
     Channel channel = connection.createChannel();
     channel.exchangeDeclare(EXCHANGE_NAME, "fanout");
 
-    //random queue name for the client
+    // random queue name for the client
+    // a non-durable, exclusive, autodelete queue 
     String queueName = channel.queueDeclare().getQueue();
 
     //queue will be bind to exchange to receive messages
